@@ -43,29 +43,29 @@ module.exports = function(grunt)
             html:{
                 files:[
                 {
-                           expand: true,
-                           dot: true,
-                           cwd: './',
-                           src: ['*.html'],
-                           dest: 'dist'
+                    expand: true,
+                    dot: true,
+                    cwd: './',
+                    src: ['*.html'],
+                    dest: 'dist'
                 }]
             },
 
             fonts: {
                 files: [
                 {
-                           expand: true,
-                           dot: true,
-                           cwd: 'node_modules/font-awesome',
-                           src: ['fonts/*.*'],
-                           dest: 'dist'
+                    expand: true,
+                    dot: true,
+                    cwd: 'node_modules/font-awesome',
+                    src: ['fonts/*.*'],
+                    dest: 'dist'
                 }]
             }
         },
 
         clean: {
             build: {
-                       src: ['dist/']
+                src: ['dist/']
             }
         },
 
@@ -73,10 +73,10 @@ module.exports = function(grunt)
             dynamic: {
                 files: [
                 {
-                           expand:true,
-                           cwd:'./',
-                           src: ['img/*.{png,gif,jpg}'],
-                           dest: 'dist/'
+                    expand:true,
+                    cwd:'./',
+                    src: ['img/*.{png,gif,jpg}'],
+                    dest: 'dist/'
                 }]
             }
         },
