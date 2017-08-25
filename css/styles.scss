@@ -71,4 +71,36 @@ body{
     position: absolute;
     bottom: 0px;
 }
+
+.modal-dialog{
     
+    .modal-body{
+        background-color: $background-light;
+    };
+    
+    .modal-title{
+        color: floralwhite;
+    };
+
+}
+
+#loginModal
+{
+    .modal-header{
+        background-color: blue;
+    };
+    .modal-footer{
+        background-color: $background-pale;
+    };
+    #LoginModalClose{
+        color: floralwhite;
+    }
+}
+#reserveModal{
+    .modal-header{
+        background-color: $background-dark;
+    }
+    #reserveModalClose{
+        color: floralwhite;
+    }
+}

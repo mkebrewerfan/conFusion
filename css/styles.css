@@ -51,3 +51,24 @@ body {
   right: 0px;
   position: absolute;
   bottom: 0px; }
+
+.modal-dialog .modal-body {
+  background-color: #9575CD; }
+
+.modal-dialog .modal-title {
+  color: floralwhite; }
+
+#loginModal .modal-header {
+  background-color: blue; }
+
+#loginModal .modal-footer {
+  background-color: #D1C4E9; }
+
+#loginModal #LoginModalClose {
+  color: floralwhite; }
+
+#reserveModal .modal-header {
+  background-color: #512DA8; }
+
+#reserveModal #reserveModalClose {
+  color: floralwhite; }

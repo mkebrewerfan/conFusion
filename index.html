@@ -32,40 +32,90 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
                 <span class="navbar-text">
+                <!-- replace it with jQuery to show and hide
                     <a data-toggle="modal" data-target="#loginModal">
                         <span class="fa fa-sign-in"></span>Login
-                    </a>                       
-                    </span>
+                    </a>  
+                -->
+                    <a role="button" id="login-link">
+                        <span class="fa fa-sign-in"></span>Login
+                    </a>  
+
+                </span>
             </div>
         </div>
     </nav>
 
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h4 class="modal-title">Login </h4>
+                <!-- replace close action with jQuery
+                <button type="button" class="close" data-dismiss="modal" id="modalClose">&times;</button>
+                -->
+                <button type="button" class="close" id="loginModalClose">&times;</button>
+                
+            </div>
+            <div class="modal-body">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                        <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputPassword3">Password</label>
+                        <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox"> Remember me
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <!-- replace close action with jQuery
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                -->
+                <button type="button" class="btn btn-default btn-sm" id="loginCancelBtn">Cancel</button>
+                
+                <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog" role="content">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header border-0">
                     <h4 class="modal-title">Reserve a Table</h4>
-                   <button type="button" class="close" data-dismiss="modal">
-                       &times;
-                   </button>
+                    <!-- replace close action with jQuery
+                   <button type="button" class="close" data-dismiss="modal" id="modalClose">&times;</button>
+                    -->
+                   <button type="button" class="close" id="reserveModalClose">&times;</button>
+                   
                 </div>
                 <div class="modal-body">            
                    <form>
                         <div class="form-group row">
                             <label for="reserve"class="col-3">Number of Guests</label>
                             <div class="col ml-3">                                
-                                <label class="radio-inline mr-2"><input type="radio" id = "reserve" name="optradio">1 </label>
-                                <label class="radio-inline mr-2"><input type="radio" id = "reserve" name="optradio">2 </label>
-                                <label class="radio-inline mr-2"><input type="radio" id = "reserve" name="optradio">3 </label>
-                                <label class="radio-inline mr-2"><input type="radio" id = "reserve" name="optradio">4 </label>
-                                <label class="radio-inline mr-2"><input type="radio" id = "reserve" name="optradio">5 </label>
-                                <label class="radio-inline "><input type="radio" id = "reserve" name="optradio">6 </label>
+                                <label class="radio-inline mr-2"><input type="radio" id = "reserve" name="optradio"> 1  </label>
+                                <label class="radio-inline mr-2"><input type="radio" id = "reserve" name="optradio"> 2  </label>
+                                <label class="radio-inline mr-2"><input type="radio" id = "reserve" name="optradio"> 3  </label>
+                                <label class="radio-inline mr-2"><input type="radio" id = "reserve" name="optradio"> 4  </label>
+                                <label class="radio-inline mr-2"><input type="radio" id = "reserve" name="optradio"> 5  </label>
+                                <label class="radio-inline "><input type="radio" id = "reserve" name="optradio"> 6  </label>
                             </div>
                         </div>
                         <div class="form-group row">
                                 <label for="section" class="col-3">Section</label> 
                                  <div class="btn-group btn-group-sm ml-4" role="group" id="section" >
-                                        <button type="button" class="btn btn-success active ">Non-Smoking</button>
+                                        <button type="button" class="btn btn-success active ml-1">Non-Smoking</button>
                                         <button type="button" class="btn btn-danger">Smoking</button>
                                 </div>                                            
                         </div>        
@@ -87,7 +137,10 @@
                        <div class="form-group row">
                             <label for="submit" class="sr-only col-3"></label>
                             <div class="btn-group btn-group-sm offset-3 col" role="group" id ="submit">
+                                <!-- replace close action with jQuery
                                     <button type="button" class="btn btn-default btn-sm ml-3 mr-2" data-dismiss="modal">Cancel</button>
+                                -->    
+                                    <button type="button" class="btn btn-default btn-sm ml-3 mr-2" id="reserveCancelBtn">Cancel</button>
                                     <button type="button" class="btn btn-primary btn-sm">Reserve</button>
                                     
                             </div>    
@@ -111,8 +164,12 @@
                    <img src="img/logo.png" class="img-fluid">         
                 </div>
                 <div class="col col-sm-3 align-self-center"> 
+                    <!-- replace it with jQuery in the js/script.js
                     <a role="button" class="btn btn-warning btn-sm btn-block nav-link" 
-                       data-toggle="modal" data-target="#reserveModal">Reserve Table</a>                       
+                       data-toggle="modal" data-target="#reserveModal">Reserve Table</a>  
+                    -->
+                    <a role="button" class="btn btn-warning btn-sm btn-block nav-link" id="reserve-table-btn">Reserve Table
+                    </a>                     
                 </div>
                 
             </div>

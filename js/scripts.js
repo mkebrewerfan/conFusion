@@ -16,4 +16,34 @@ $(document).ready(function() {
           $("#carousel-button").children("span").addClass("fa-pause");
         }
     });
+
+    $("#login-link").click(function(){
+
+        $("#loginModal").modal("show");
+    });
+
+    $("#loginModalClose").click(function(){
+      
+        $("#loginModal").modal("hide");
+    });
+
+    $("#reserve-table-btn").click(function(){
+      
+       $("#reserveModal").modal("show");
+    });
+
+    $("#reserveModalClose").click(function(){
+      
+        $("#reserveModal").modal("hide");
+    });
+
+    $("#reserveCancelBtn").click(function(){
+      
+       $("#reserveModal").modal("hide");
+    });
+
+    $("#loginCancelBtn").click(function(){
+      
+       $("#loginModal").modal("hide");
+    });
  });
